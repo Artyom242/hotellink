@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "8402e0ed-8c24-4023-8a60-c13adab77cab",
+		"name": "hh-testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26810784"
+	},
+	"item": [
+		{
+			"name": "Создать бронь",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "room_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "check_in_date",
+							"value": "2025-08-01",
+							"type": "text"
+						},
+						{
+							"key": "check_out_date",
+							"value": "2025-08-23",
+							"type": "text"
+						},
+						{
+							"key": "adults",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "total_price",
+							"value": "50000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"create"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "room_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "check_in_date",
+							"value": "23",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Посмотреть все брони",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "room_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "check_in_date",
+							"value": "12-03-2025",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "check_out_date",
+							"value": "14-04-2025",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "adults",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "total_price",
+							"value": "1233",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "room_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "check_in_date",
+							"value": "23",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Посмотреть выбранную бронь",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "room_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "check_in_date",
+							"value": "12-03-2025",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "check_out_date",
+							"value": "14-04-2025",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "adults",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "total_price",
+							"value": "1233",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"1"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "room_id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "check_in_date",
+							"value": "23",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
