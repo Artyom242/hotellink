@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'booking'] , function (){
+    Route::get('/', [BookingController::class, 'getBookingList'])->name('get_booking_list');
+    Route::get('/{booking}', [BookingController::class, 'getBookingById'])->name('get_booking');
+    Route::post('/create', [BookingController::class, 'createBooking'])->name('create_booking');
 });

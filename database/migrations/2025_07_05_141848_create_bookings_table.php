@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('client_id')->constrained()->onDelete('cascade');
             $table->foreignId('room_id')->constrained()->onDelete('cascade');
-            $table->date('check_id_date');
+            $table->date('check_in_date');
             $table->date('check_out_date');
             $table->integer('adults');
             $table->integer('total_price');
